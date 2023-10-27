@@ -10,37 +10,32 @@ public class Movement : MonoBehaviour
     [SerializeField] public float speed;
     [SerializeField] private float maxSpeed;
     public bool playerHasControl;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float minRotZ;
+    public float maxRotZ;
+    public float rotZ;
 
-    // Update is called once per frame
     void Update()
     {
-        
         relativeFwd = cabinRigidbody.transform.TransformDirection(Vector3.forward);
         if (playerHasControl)
         {
             if (Input.GetKey("w"))
-                cabinRigidbody.transform.Rotate(-rotDegrees,0,0);
+                cabinRigidbody.transform.Rotate(-rotDegrees,0, rotZ);
 
             if ( Input.GetKey("s"))
             {
-                cabinRigidbody.transform.Rotate(rotDegrees,0,0);
+                cabinRigidbody.transform.Rotate(rotDegrees,0,rotZ);
             }
 
             if (Input.GetKey("d"))
             {
-                cabinRigidbody.transform.Rotate(0, rotDegrees,0);  
+                cabinRigidbody.transform.Rotate(0, rotDegrees,rotZ);  
 
             }
 
             if (Input.GetKey("a"))
             {
-                cabinRigidbody.transform.Rotate(0, -rotDegrees,0); 
+                cabinRigidbody.transform.Rotate(0, -rotDegrees,rotZ); 
             }
 
             if (Input.GetKey("space"))
