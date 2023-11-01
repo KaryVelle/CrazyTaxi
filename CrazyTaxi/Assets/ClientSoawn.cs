@@ -42,7 +42,7 @@ public class ClientSoawn : MonoBehaviour
         
         if (!clienteObtenido)
         {
-            if (Vector3.Distance(player.transform.position, _newCliente.transform.position) <= 1)
+            if (Vector3.Distance(player.transform.position, _newCliente.transform.position) <= 3)
             {
                
                 //Debug.Log("FRENA");
