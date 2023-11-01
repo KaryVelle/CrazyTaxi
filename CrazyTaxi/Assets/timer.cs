@@ -10,9 +10,13 @@ public class timer : MonoBehaviour
    public Text timer1;
    public float tiempoGlobal;
 
-   private void Update()
+   private void Start()
    {
       tiempoGlobal = 60;
+   }
+
+   private void Update()
+   {
       tiempoGlobal -= Time.deltaTime;
       GetComponent<Text>().text = tiempoGlobal.ToString();
    }
