@@ -78,11 +78,9 @@ public class ClientSoawn : MonoBehaviour
             tiempotimer = 10;
             score += 100;
             startTimer = false;
-            //Debug.Log("A");
             Destroy(_newCliente );
             Destroy(_newObjective);
             SpawnClient();
-            Debug.Log(score);
         }
     }
     
