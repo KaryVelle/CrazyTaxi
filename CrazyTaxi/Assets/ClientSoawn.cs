@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public class ClientSoawn : MonoBehaviour
 {
+    public ArrowPoint arrow;
     public GameObject cliente;
     public GameObject objective;
     private GameObject _newCliente;
@@ -31,6 +32,7 @@ public class ClientSoawn : MonoBehaviour
 
     private void Update()
     {
+        arrow.target = _newCliente;
         scoreText.text = "score:" + score;
         if (startTimer)
         {
@@ -40,9 +42,9 @@ public class ClientSoawn : MonoBehaviour
         
         if (!clienteObtenido)
         {
-            if (Vector3.Distance(player.transform.position, _newCliente.transform.position) <= 1) 
+            if (Vector3.Distance(player.transform.position, _newCliente.transform.position) <= 1)
             {
-                  
+               
                 //Debug.Log("FRENA");
                 _newCliente.transform.parent = player.transform;
                 SpawnObjective();
@@ -53,6 +55,7 @@ public class ClientSoawn : MonoBehaviour
         }
         else
         {
+            arrow.target = _newObjective;
             LeaveClient();
         }
     }
