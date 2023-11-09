@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public class ClientSoawn : MonoBehaviour
 {
+    public ArrowPoint arrow;
     public GameObject cliente;
     public GameObject objective;
     private GameObject _newCliente;
@@ -19,41 +20,42 @@ public class ClientSoawn : MonoBehaviour
     public Text tiempoCliente;
     public float tiempotimer;
     public bool startTimer;
+    public int score=0;
+    public Text scoreText;
     
 
     private void Start()
     {
         rb = player.GetComponent<Rigidbody>();
         SpawnClient();
-        
-
-
     }
 
     private void Update()
     {
+        arrow.target = _newCliente;
+        scoreText.text = "score:" + score;
         if (startTimer)
         {
-            
             tiempotimer -= Time.deltaTime;
             tiempoCliente.text = tiempotimer.ToString();
         }
         
         if (!clienteObtenido)
         {
-            if (Vector3.Distance(player.transform.position, _newCliente.transform.position) <= 1) 
+            if (Vector3.Distance(player.transform.position, _newCliente.transform.position) <= 3)
             {
-                  
+               
                 //Debug.Log("FRENA");
                 _newCliente.transform.parent = player.transform;
                 SpawnObjective();
                 clienteObtenido = true;
                 startTimer = true;
-                tiempotimer = 10f;
+                tiempotimer = 30f;
             } 
         }
         else
         {
+            arrow.target = _newObjective;
             LeaveClient();
         }
     }
@@ -61,12 +63,9 @@ public class ClientSoawn : MonoBehaviour
 
     private void SpawnClient()
     {
-       
         int indexC = Random.Range(0, positions.Count);
         _newCliente = Instantiate(cliente, positions[indexC], Quaternion.identity);
         clienteObtenido = false;
-        
-        
     }
 
     private void SpawnObjective()
@@ -80,8 +79,8 @@ public class ClientSoawn : MonoBehaviour
         if ((Vector3.Distance(player.transform.position, _newObjective.transform.position) <= 5))
         {
             tiempotimer = 10;
+            score += 100;
             startTimer = false;
-            //Debug.Log("A");
             Destroy(_newCliente );
             Destroy(_newObjective);
             SpawnClient();

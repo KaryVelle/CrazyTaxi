@@ -9,11 +9,23 @@ public class timer : MonoBehaviour
 {
    public Text timer1;
    public float tiempoGlobal;
+   public GameObject endScreen;
+
+   private void Start()
+   {
+      Time.timeScale = 1;
+      tiempoGlobal = 60;
+   }
 
    private void Update()
    {
-      tiempoGlobal = 60;
       tiempoGlobal -= Time.deltaTime;
       GetComponent<Text>().text = tiempoGlobal.ToString();
+
+      if (tiempoGlobal <= 0)
+      {
+         Time.timeScale = 0;
+         endScreen.SetActive(true);
+      }
    }
 }
