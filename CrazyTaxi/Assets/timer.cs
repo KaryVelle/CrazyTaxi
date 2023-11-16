@@ -14,7 +14,7 @@ public class timer : MonoBehaviour
    private void Start()
    {
       Time.timeScale = 1;
-      tiempoGlobal = 60;
+      tiempoGlobal = 300;
    }
 
    private void Update()

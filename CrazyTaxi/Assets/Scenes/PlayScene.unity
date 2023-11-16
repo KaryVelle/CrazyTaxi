@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13562949, g: 0.14643247, b: 0.13897017, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -18955,7 +18955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1034468630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27242,7 +27242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493081793}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.6487556, y: 2.9548855, z: 34.5}
+  m_LocalPosition: {x: 80.8, y: 2.9548855, z: -57.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27764,12 +27764,15 @@ MonoBehaviour:
   player: {fileID: 6291130061206369773}
   rb: {fileID: 6291130061206369777}
   positions:
-  - {x: -9.4, y: 10.22, z: 3.22}
-  - {x: -30.48, y: 4.06, z: -5.97}
-  - {x: 77.67, y: 19.1884, z: -30.1}
-  - {x: 77.67, y: 19.1884, z: 24.8}
+  - {x: -150, y: 10.22, z: 26.8}
+  - {x: 14, y: 4.06, z: 110}
+  - {x: -102, y: 19.1884, z: 180}
+  - {x: 80, y: 19.1884, z: -57}
   - {x: 27.21, y: 7.27, z: 26.99}
   - {x: 11.8, y: 7.27, z: 147.4}
+  - {x: -93.3, y: 19.6, z: 137.5}
+  - {x: -93.3, y: 19.6, z: 137.5}
+  - {x: -93.3, y: 19.6, z: 137.5}
   - {x: -93.3, y: 19.6, z: 137.5}
   objectives:
   - {x: -9.4, y: 10.22, z: 3.22}
@@ -38277,6 +38280,9 @@ MonoBehaviour:
   speed: 2
   maxSpeed: 10
   playerHasControl: 1
+  minRotZ: 0
+  maxRotZ: 0
+  rotZ: 0
 --- !u!1 &6291130061206369775
 GameObject:
   m_ObjectHideFlags: 0

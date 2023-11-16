@@ -44,8 +44,6 @@ public class ClientSoawn : MonoBehaviour
         {
             if (Vector3.Distance(player.transform.position, _newCliente.transform.position) <= 3)
             {
-               
-                //Debug.Log("FRENA");
                 _newCliente.transform.parent = player.transform;
                 SpawnObjective();
                 clienteObtenido = true;
@@ -56,6 +54,14 @@ public class ClientSoawn : MonoBehaviour
         else
         {
             arrow.target = _newObjective;
+            if (tiempotimer <= 0)
+            {
+                Destroy(_newCliente);
+                Destroy(_newObjective);
+                tiempotimer = 10;
+                startTimer = false;
+                SpawnClient();
+            }
             LeaveClient();
         }
     }
