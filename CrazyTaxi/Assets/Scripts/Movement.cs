@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
     public float maxRotZ;
     public float rotZ;
 
-    void Update()
+    void FixedUpdate()
     {
         relativeFwd = cabinRigidbody.transform.TransformDirection(Vector3.forward);
         if (playerHasControl)

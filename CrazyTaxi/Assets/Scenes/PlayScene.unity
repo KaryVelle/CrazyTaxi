@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.08275992, g: 0.036200278, b: 0.13373436, a: 1}
+  m_IndirectSpecularColor: {r: 0.082760915, g: 0.036200427, b: 0.13373418, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3518,7 +3518,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 829667415}
-  m_RootOrder: 254
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &270200149
 BoxCollider:
@@ -4931,7 +4931,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 82.4
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -5589,7 +5589,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 829667415}
-  m_RootOrder: 265
+  m_RootOrder: 125
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &376455170
 BoxCollider:
@@ -12550,6 +12550,7 @@ Transform:
   - {fileID: 946929752}
   - {fileID: 8455474605346520706}
   - {fileID: 529817661}
+  - {fileID: 2043133780}
   - {fileID: 1316344757}
   - {fileID: 92319001}
   - {fileID: 792419612}
@@ -12570,6 +12571,7 @@ Transform:
   - {fileID: 816522578}
   - {fileID: 1762797105}
   - {fileID: 1245956113}
+  - {fileID: 270200148}
   - {fileID: 908533495}
   - {fileID: 465917828}
   - {fileID: 1835931621}
@@ -12593,6 +12595,7 @@ Transform:
   - {fileID: 1697969590}
   - {fileID: 806030338}
   - {fileID: 1833375137}
+  - {fileID: 1180275294}
   - {fileID: 590216115}
   - {fileID: 1619525649}
   - {fileID: 168733783}
@@ -12633,6 +12636,8 @@ Transform:
   - {fileID: 1575226034}
   - {fileID: 2111071869}
   - {fileID: 1767145829}
+  - {fileID: 1323962897}
+  - {fileID: 1259768284}
   - {fileID: 870087613}
   - {fileID: 781888772}
   - {fileID: 1304154690}
@@ -12651,7 +12656,7 @@ Transform:
   - {fileID: 1997581527}
   - {fileID: 1846753739}
   - {fileID: 1775065696}
-  - {fileID: 2043133780}
+  - {fileID: 376455169}
   - {fileID: 403142037}
   - {fileID: 1151325634}
   - {fileID: 749043596}
@@ -12665,12 +12670,14 @@ Transform:
   - {fileID: 1512532982}
   - {fileID: 1581029887}
   - {fileID: 1839244837}
+  - {fileID: 1176023595}
   - {fileID: 367221327}
   - {fileID: 2112023534}
   - {fileID: 1886060224}
   - {fileID: 1289182027}
   - {fileID: 383942902}
   - {fileID: 120325294}
+  - {fileID: 984083411}
   - {fileID: 457030597}
   - {fileID: 310406119}
   - {fileID: 1027791968}
@@ -12785,22 +12792,15 @@ Transform:
   - {fileID: 1299120281}
   - {fileID: 553583841}
   - {fileID: 551980637}
-  - {fileID: 270200148}
-  - {fileID: 1180275294}
   - {fileID: 1410914325}
   - {fileID: 1890516311}
   - {fileID: 1293603826}
   - {fileID: 1802103818}
   - {fileID: 1489160677}
-  - {fileID: 1323962897}
   - {fileID: 1331819333}
   - {fileID: 1984827603}
-  - {fileID: 1259768284}
-  - {fileID: 376455169}
   - {fileID: 861131361}
   - {fileID: 1567925817}
-  - {fileID: 1176023595}
-  - {fileID: 984083411}
   - {fileID: 891355647}
   - {fileID: 1813531512}
   - {fileID: 1178964422}
@@ -16141,7 +16141,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 829667415}
-  m_RootOrder: 269
+  m_RootOrder: 146
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &984083412
 BoxCollider:
@@ -19115,7 +19115,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 829667415}
-  m_RootOrder: 268
+  m_RootOrder: 139
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -181.906}
 --- !u!65 &1176023596
 BoxCollider:
@@ -19312,7 +19312,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 829667415}
-  m_RootOrder: 255
+  m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1180275295
 BoxCollider:
@@ -20187,7 +20187,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 829667415}
-  m_RootOrder: 264
+  m_RootOrder: 106
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1259768285
 BoxCollider:
@@ -22027,7 +22027,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 829667415}
-  m_RootOrder: 261
+  m_RootOrder: 105
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 2.927}
 --- !u!65 &1323962898
 BoxCollider:
@@ -28308,7 +28308,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1761150453}
   - component: {fileID: 1761150452}
-  - component: {fileID: 1761150451}
   m_Layer: 0
   m_Name: UPCAM
   m_TagString: Untagged
@@ -28316,14 +28315,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1761150451
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761150450}
-  m_Enabled: 1
 --- !u!20 &1761150452
 Camera:
   m_ObjectHideFlags: 0
@@ -33102,7 +33093,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 829667415}
-  m_RootOrder: 120
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2043133781
 BoxCollider:
@@ -34439,7 +34430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6291130061206369775}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: -18.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34484,7 +34475,7 @@ MonoBehaviour:
   cabinRigidbody: {fileID: 6291130061206369777}
   relativeFwd: {x: 0, y: 0, z: 0}
   speed: 2
-  maxSpeed: 10
+  maxSpeed: 5
   playerHasControl: 1
   minRotZ: 0
   maxRotZ: 0
