@@ -58,7 +58,7 @@ public class ClientSoawn : MonoBehaviour
             {
                 Destroy(_newCliente);
                 Destroy(_newObjective);
-                tiempotimer = 10;
+                tiempotimer = 0;
                 startTimer = false;
                 SpawnClient();
             }
@@ -77,7 +77,7 @@ public class ClientSoawn : MonoBehaviour
     private void SpawnObjective()
     {
         int indexO = Random.Range(0, objectives.Count);
-        _newObjective = Instantiate(objective, positions[indexO], Quaternion.identity);
+        _newObjective = Instantiate(objective, objectives[indexO], Quaternion.identity);
     }
 
     private void LeaveClient()
