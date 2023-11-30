@@ -11,4 +11,10 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene(SceneName);
     }
+
+    public void Quit()
+    {
+        Debug.Log("Cierra");
+        Application.Quit();
+    }
 }

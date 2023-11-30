@@ -10,5 +10,10 @@ public class UIButton : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("Scenes/Start");
+    }
     
 }
