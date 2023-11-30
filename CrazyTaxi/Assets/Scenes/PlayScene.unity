@@ -34567,8 +34567,8 @@ MonoBehaviour:
   rotDegrees: 1
   cabinRigidbody: {fileID: 6291130061206369777}
   relativeFwd: {x: 0, y: 0, z: 0}
-  speed: 2
-  maxSpeed: 20
+  speed: 1
+  maxSpeed: 15
   playerHasControl: 1
   minRotZ: 0
   maxRotZ: 0

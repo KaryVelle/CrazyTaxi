@@ -12,6 +12,7 @@ public class DetectCollision : MonoBehaviour
     public float recoveryTime;
     float startTime;
     static float t = 0.0f;
+    
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Building"))
