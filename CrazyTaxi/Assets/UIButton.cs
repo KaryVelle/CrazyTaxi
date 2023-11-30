@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class UIButton : MonoBehaviour
 {
+    
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    
 }
