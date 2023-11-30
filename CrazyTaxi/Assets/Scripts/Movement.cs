@@ -46,7 +46,7 @@ public class Movement : MonoBehaviour
                 currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, acceleration * Time.fixedDeltaTime);
                 cabinRigidbody.velocity = relativeFwd * speed * currentSpeed;
             }
-            else
+            else if(!Input.GetKey("space") && (!Input.GetKey("q")))
             {
                 currentSpeed = Mathf.MoveTowards(currentSpeed, 0, deacceleration * Time.fixedDeltaTime);
                 cabinRigidbody.velocity = relativeFwd * speed * currentSpeed;
@@ -54,7 +54,8 @@ public class Movement : MonoBehaviour
 
             if (Input.GetKey("q"))
             {
-                currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, acceleration * Time.fixedDeltaTime);
+                currentSpeed = 3;
+                currentSpeed = Mathf.MoveTowards(currentSpeed, 5, acceleration * Time.fixedDeltaTime);
                 cabinRigidbody.velocity = relativeFwd * speed * currentSpeed * -1;
             }
 

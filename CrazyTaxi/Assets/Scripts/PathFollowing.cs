@@ -9,7 +9,6 @@ public class PathFollowing : SteeringBehavior
     public bool looping;
     private int _currentNode;
     private int _pathDirection = 1;
-    private float rotationSpeed = 5;
 
     public override Vector3 GetForce()
     {
