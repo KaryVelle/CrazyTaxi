@@ -2255,7 +2255,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 1.4000244, y: -4.249954}
+  m_AnchoredPosition: {x: 1.4000244, y: -4.249939}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &153924704
@@ -34568,7 +34568,7 @@ MonoBehaviour:
   cabinRigidbody: {fileID: 6291130061206369777}
   relativeFwd: {x: 0, y: 0, z: 0}
   speed: 2
-  maxSpeed: 5
+  maxSpeed: 20
   playerHasControl: 1
   minRotZ: 0
   maxRotZ: 0

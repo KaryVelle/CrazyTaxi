@@ -40,6 +40,7 @@ public class ClientSoawn : MonoBehaviour
             tiempoCliente.text = tiempotimer.ToString();
         }
         
+        
         if (!clienteObtenido)
         {
             if (Vector3.Distance(player.transform.position, _newCliente.transform.position) <= 3)
@@ -58,7 +59,7 @@ public class ClientSoawn : MonoBehaviour
             {
                 Destroy(_newCliente);
                 Destroy(_newObjective);
-                tiempotimer = 0;
+                tiempoCliente.text = "0";
                 startTimer = false;
                 SpawnClient();
             }
@@ -84,7 +85,7 @@ public class ClientSoawn : MonoBehaviour
     {
         if ((Vector3.Distance(player.transform.position, _newObjective.transform.position) <= 5))
         {
-            tiempotimer = 10;
+            tiempoCliente.text = "0";
             score += 100;
             startTimer = false;
             Destroy(_newCliente );
