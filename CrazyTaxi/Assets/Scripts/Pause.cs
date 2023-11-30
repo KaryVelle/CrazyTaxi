@@ -6,10 +6,13 @@ public class Pause : MonoBehaviour
 {
    public GameObject pausemenu;
 
-   public void PauseMenu()
+   void Update()
    {
-      Time.timeScale = 0;
-      pausemenu.SetActive(true);
+      if (Input.GetKeyDown(KeyCode.Escape))
+      {
+         Time.timeScale = 0;
+         pausemenu.SetActive(true);
+      }
    }
 
    public void StartGame()
