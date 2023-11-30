@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour
 {
-   public GameObject pausemenu;
+   public GameObject pauseMenu;
 
    void Update()
    {
       if (Input.GetKeyDown(KeyCode.Escape))
       {
          Time.timeScale = 0;
-         pausemenu.SetActive(true);
+         pauseMenu.SetActive(true);
       }
    }
 
    public void StartGame()
    {
-      pausemenu.SetActive(false);
+      pauseMenu.SetActive(false);
       Time.timeScale = 1;
    }
 }

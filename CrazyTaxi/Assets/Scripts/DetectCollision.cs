@@ -12,13 +12,23 @@ public class DetectCollision : MonoBehaviour
     public float recoveryTime;
     float startTime;
     static float t = 0.0f;
-    
+    public Rigidbody rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Building"))
         {
             StartCoroutine(Punish());
             Debug.Log("Chocaste pendejo");
+        }
+        else
+        {
+            StartCoroutine(StopR());
         }
        
     }
@@ -46,5 +56,12 @@ public class DetectCollision : MonoBehaviour
             timer = 0;
         }
         movement.playerHasControl = true;
-    } 
+    }
+
+    private IEnumerator StopR()
+    {
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
+        yield return new WaitForSeconds(3f);
+        rb.constraints = RigidbodyConstraints.None;
+    }
 }

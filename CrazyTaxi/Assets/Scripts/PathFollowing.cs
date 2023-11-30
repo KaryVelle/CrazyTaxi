@@ -37,9 +37,9 @@ public class PathFollowing : SteeringBehavior
 
     Vector3 Seek()
     {
-        Target = nodes[_currentNode];
-        DesiredVelocity = (Target - Position).normalized * speed;
-        Vector3 steering = DesiredVelocity - Velocity;
+        target = nodes[_currentNode];
+        desiredVelocity = (target - position).normalized * speed;
+        Vector3 steering = desiredVelocity - velocity;
         return steering;
     }
 }

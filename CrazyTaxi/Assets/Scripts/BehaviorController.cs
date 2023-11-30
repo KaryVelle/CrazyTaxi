@@ -15,8 +15,8 @@ public class BehaviorController : MonoBehaviour
         
         foreach ( SteeringBehavior behavior in behaviors)
         {
-            behavior.Position = transform.position;
-            behavior.Velocity = velocity;
+            behavior.position = transform.position;
+            behavior.velocity = velocity;
             totalForce += behavior.GetForce();
         }
 

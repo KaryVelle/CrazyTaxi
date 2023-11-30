@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour
             if (Input.GetKey("e"))
             {
                 currentSpeed = 0;
-                cabinRigidbody.velocity = relativeFwd * speed * currentSpeed;
+                cabinRigidbody.velocity = Vector3.zero;
             }
         }
     }

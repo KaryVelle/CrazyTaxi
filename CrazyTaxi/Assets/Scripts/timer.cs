@@ -8,21 +8,21 @@ using UnityEngine.UI;
 public class timer : MonoBehaviour
 {
    public Text timer1;
-   public float tiempoGlobal;
+   public float globalTime;
    public GameObject endScreen;
 
    private void Start()
    {
       Time.timeScale = 1;
-      tiempoGlobal = 300;
+      globalTime = 300;
    }
 
    private void Update()
    {
-      tiempoGlobal -= Time.deltaTime;
-      GetComponent<Text>().text = tiempoGlobal.ToString();
+      globalTime -= Time.deltaTime;
+      GetComponent<Text>().text = globalTime.ToString();
 
-      if (tiempoGlobal <= 0)
+      if (globalTime <= 0)
       {
          GetComponent<Text>().text = "0";
          Time.timeScale = 0;

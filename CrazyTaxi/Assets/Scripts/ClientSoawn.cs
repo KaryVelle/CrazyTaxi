@@ -8,17 +8,16 @@ using Random = UnityEngine.Random;
 public class ClientSoawn : MonoBehaviour
 {
     public ArrowPoint arrow;
-    public GameObject cliente;
+    public GameObject client;
     public GameObject objective;
-    private GameObject _newCliente;
+    private GameObject _newClient;
     private GameObject _newObjective;
     public GameObject player;
-    [SerializeField] private Rigidbody rb;
     public List<Vector3> positions;
     public List<Vector3> objectives;
-    public bool clienteObtenido = false;
-    public Text tiempoCliente;
-    public float tiempotimer;
+    public bool clientOb = false;
+    public Text timeClient;
+    public float timer;
     public bool startTimer;
     public int score=0;
     public Text scoreText;
@@ -26,40 +25,39 @@ public class ClientSoawn : MonoBehaviour
 
     private void Start()
     {
-        rb = player.GetComponent<Rigidbody>();
         SpawnClient();
     }
 
     private void Update()
     {
-        arrow.target = _newCliente;
+        arrow.target = _newClient;
         scoreText.text = "score:" + score;
         if (startTimer)
         {
-            tiempotimer -= Time.deltaTime;
-            tiempoCliente.text = tiempotimer.ToString();
+            timer -= Time.deltaTime;
+            timeClient.text = timer.ToString();
         }
         
         
-        if (!clienteObtenido)
+        if (!clientOb)
         {
-            if (Vector3.Distance(player.transform.position, _newCliente.transform.position) <= 3)
+            if (Vector3.Distance(player.transform.position, _newClient.transform.position) <= 3)
             {
-                _newCliente.transform.parent = player.transform;
+                _newClient.transform.parent = player.transform;
                 SpawnObjective();
-                clienteObtenido = true;
+                clientOb = true;
                 startTimer = true;
-                tiempotimer = 30f;
+                timer = 30f;
             } 
         }
         else
         {
             arrow.target = _newObjective;
-            if (tiempotimer <= 0)
+            if (timer <= 0)
             {
-                Destroy(_newCliente);
+                Destroy(_newClient);
                 Destroy(_newObjective);
-                tiempoCliente.text = "0";
+                timeClient.text = "0";
                 startTimer = false;
                 SpawnClient();
             }
@@ -71,8 +69,8 @@ public class ClientSoawn : MonoBehaviour
     private void SpawnClient()
     {
         int indexC = Random.Range(0, positions.Count);
-        _newCliente = Instantiate(cliente, positions[indexC], Quaternion.identity);
-        clienteObtenido = false;
+        _newClient = Instantiate(client, positions[indexC], Quaternion.identity);
+        clientOb = false;
     }
 
     private void SpawnObjective()
@@ -85,10 +83,10 @@ public class ClientSoawn : MonoBehaviour
     {
         if ((Vector3.Distance(player.transform.position, _newObjective.transform.position) <= 5))
         {
-            tiempoCliente.text = "0";
+            timeClient.text = "0";
             score += 100;
             startTimer = false;
-            Destroy(_newCliente );
+            Destroy(_newClient );
             Destroy(_newObjective);
             SpawnClient();
         }
