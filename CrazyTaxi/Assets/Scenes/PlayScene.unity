@@ -34692,11 +34692,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d97bce57df15747aa37e50d4ab446c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotDegrees: 1
+  rotDegrees: 0.8
   cabinRigidbody: {fileID: 6291130061206369777}
   relativeFwd: {x: 0, y: 0, z: 0}
-  speed: 1
-  maxSpeed: 20
+  acceleration: 3
+  deacceleration: 5
+  maxSpeed: 15
+  speed: 2
   playerHasControl: 1
   minRotZ: 0
   maxRotZ: 0
