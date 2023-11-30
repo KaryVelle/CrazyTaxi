@@ -24,6 +24,7 @@ public class timer : MonoBehaviour
 
       if (tiempoGlobal <= 0)
       {
+         GetComponent<Text>().text = "0";
          Time.timeScale = 0;
          endScreen.SetActive(true);
       }
